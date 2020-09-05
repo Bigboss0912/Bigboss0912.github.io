@@ -8,8 +8,7 @@ class HulkView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return{
-            'title': 'Hulk',
-            'body': 'Once upon a time ...',
+            'title': 'hulk',
         }
        
     
@@ -18,8 +17,7 @@ class BwView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return{
-            'title': 'Black Widow',
-            'body': 'Once upon a time ...',
+            'title': 'black_widow',
         }
     
     
