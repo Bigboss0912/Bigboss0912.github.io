@@ -7,6 +7,6 @@ urlpatterns = [
     path('about', AboutView.as_view()),
     path('home', HomeView.as_view()),
     path('profile', ProfileView.as_view()),
-    path('hero', HeroView.as_view())
+    path('hero', HeroView.as_view()),
     path('', HomeView.as_view()),
 ]
