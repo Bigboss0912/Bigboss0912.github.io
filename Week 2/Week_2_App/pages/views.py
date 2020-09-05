@@ -9,6 +9,7 @@ class AboutView(TemplateView):
             'title': 'About Page',
             'body': 'Once upon a time ...',
         }
+
     
 class HomeView(TemplateView):
     template_name = 'page.html'
@@ -18,6 +19,7 @@ class HomeView(TemplateView):
             'title': 'Home Page',
             'body': 'Once upon a time ...',
         }
+
     
 class ProfileView(TemplateView):
     template_name = 'page.html'
