@@ -29,3 +29,13 @@ class ProfileView(TemplateView):
             'title': 'Profile Page',
             'body': 'Once upon a time ...',
         }
+    
+    
+class HeroView(TemplateView):
+    template_name = 'page.html'
+    
+    def get_context_data(self, **kwargs):
+        return{
+            'title': 'Hero Page',
+            'body': 'Once upon a time ...',
+        }
