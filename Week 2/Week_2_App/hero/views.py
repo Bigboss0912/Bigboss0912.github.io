@@ -12,5 +12,5 @@ class HulkView(TemplateView):
     template_name = 'hulk.html'
     
     
-class BWView(TemplateView):
+class BwView(TemplateView):
     template_name = 'black_widow.html'
