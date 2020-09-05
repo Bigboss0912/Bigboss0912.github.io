@@ -1,3 +1,16 @@
 from django.shortcuts import render
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+
+class HeroView(TemplateView):
+    template_name = 'hero.html'
+    
+
+
+class HulkView(TemplateView):
+    template_name = 'hulk.html'
+    
+    
+class BWView(TemplateView):
+    template_name = 'black_widow.html'
