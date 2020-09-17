@@ -27,7 +27,7 @@ SECRET_KEY = '$oc9=tkeel4lc+kj5*+bvrbckm1#j0ti1zftr6045j2m-ku(a+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['Michael1586.pythonanywhere.com']
 
 
 # Application definition
