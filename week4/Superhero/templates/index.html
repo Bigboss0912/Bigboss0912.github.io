@@ -1,8 +1,29 @@
-<h1>Welcome Tto Superhero News</h1>
-<p>This is the index page.</p>
+{% extends 'superhero_theme.html' %}
 
-<a href="Deadpool">Deadpool Profile</a>
-<a href="Ironman">Ironman Profile</a>
-<a href="Storm">Storm Profile</a>
-<a href="Spiderman">Spiderman Profile</a>
-<a href="Punisher">Punisher Profile</a>
+
+{% block content %}
+
+
+<h1>Welcome To Superhero News</h1>
+
+    <h2>Superhero Index</h2>
+    <ul style="list-style-type:disc;">
+        <li>
+            <a href="Deadpool">Deadpool Profile</a>
+        </li>
+        <li>
+            <a href="Ironman">Ironman Profile</a>
+        </li>
+        <li>
+            <a href="Storm">Storm Profile</a>
+        </li>
+        <li>
+            <a href="Spiderman">Spiderman Profile</a>
+        </li>
+        <li>
+            <a href="Punisher">Punisher Profile</a>
+        </li>
+    </ul>
+
+
+{% endblock content %}
