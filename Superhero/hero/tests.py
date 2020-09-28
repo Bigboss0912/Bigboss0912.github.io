@@ -29,3 +29,10 @@ class HeroTests(TestCase):
         x = Superhero.objects.get(pk=1)
         self. assertEqual(x.name, 'Hulk')
         self. assertEqual(x.identity, 'Bruce Banner')
+        
+    def test_image(self):
+        Superhero.objects.create(name='Hulk', identity='Bruce Banner')
+        x = Superhero.objects.get(pk=1)
+        x.image = 'Hulk.jpg'
+        x.save()
+        self. assertEqual(x.image, 'Hulk.jpg')
