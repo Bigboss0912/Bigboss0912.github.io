@@ -7,6 +7,6 @@ from .models import Superhero
 class HeroTests(TestCase):
     
     def test_hero_model(self):
-        Superhero.objects.all()
+        self. assertEqual(Superhero.objects.all(), [])
     
     
