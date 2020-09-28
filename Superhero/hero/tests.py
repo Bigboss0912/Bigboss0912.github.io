@@ -10,6 +10,9 @@ class HeroTests(TestCase):
         self. assertEqual(len(Superhero.objects.all()), 0)
         
     def test_create(self):
+        Superhero.objects.create()
+        for s in Superhero.objects.all():
+            print(s.name)
         self. assertEqual(len(Superhero.objects.all()), 0)
     
     
