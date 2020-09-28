@@ -5,6 +5,6 @@ from django.test import TestCase
 class HeroTests(TestCase):
     
     def test_hero_model(self):
-        pass
+        Superhero.objects.all()
     
     
