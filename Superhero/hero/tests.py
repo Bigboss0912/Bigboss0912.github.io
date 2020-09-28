@@ -20,8 +20,9 @@ class HeroTests(TestCase):
         x = Superhero.objects.get(pk=1)
         x.name = 'Iron Man'
         x.save()
-        self. assertEqual(x.name, 'Hulk')
-        self. assertEqual(x.identity, 'Bruce Banner')
+        y = Superhero.objects.get(pk=1)
+        self. assertEqual(y.name, 'Iron Man')
+        self. assertEqual(y.identity, 'Bruce Banner')
         
     def test_read(self):
         Superhero.objects.create(name='Hulk', identity='Bruce Banner')
