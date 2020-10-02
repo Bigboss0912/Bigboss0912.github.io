@@ -8,8 +8,8 @@ class HeroView(TemplateView):
         
     def get_context_data(self, **kwargs):
         return {
-            'title': 'My Hero View', 
-            'body': 'Heros are awesome!',
+            'name': 'Iron Man', 
+            'identity': 'Tony Stark',
         }
 
 urlpatterns = [
