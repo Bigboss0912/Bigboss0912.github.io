@@ -8,6 +8,7 @@ class HeroView(TemplateView):
         
     def get_context_data(self, **kwargs):
         return {
+            'title': 'Superhero List',
             'name': 'Iron Man', 
             'identity': 'Tony Stark',
         }
