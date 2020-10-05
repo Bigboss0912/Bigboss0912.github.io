@@ -9,6 +9,5 @@ class HeroView(TemplateView):
         x = Superhero.objects.get(pk=1)
         return {
             'title': 'Superhero Profile',
-            'name': x.name, 
-            'identity': x.identity,
+            'heroes': heroes,
         }
