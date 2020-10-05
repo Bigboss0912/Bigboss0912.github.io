@@ -1,13 +1,13 @@
 from django.shortcuts import render
-
-# Create your views here.
+from hero.models import Superhero
 
 class HeroView(TemplateView):
     template_name="hero.html"
         
     def get_context_data(self, **kwargs):
+        x = Superhero.objects.get(pk=1)
         return {
-            'title': 'Superhero List',
-            'name': 'Iron Man', 
-            'identity': 'Tony Stark',
+            'title': 'Superhero Profile',
+            'name': x.name, 
+            'identity': x.identity,
         }
