@@ -17,7 +17,7 @@ class AddHeroView(CreateView):
     
 
 class BasePage(TemplateView):
-    template_name = "page_theme.html"
+    template_name = "superhero_theme.html"
     
     
 class AboutPage(TemplateView):

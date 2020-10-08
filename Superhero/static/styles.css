@@ -2,19 +2,6 @@ body{
     background-color: dimgrey
 }
 
-#title{
-    color: darkblue;
-    background-color:black;
-    font-style: italic;
-    font-size: 50pt;
-    text-align: center;
-    border-style: double;
-    border-width: thick;
-    border-color: crimson;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
 h1{
     color: darkblue;
     background-color:crimson;
