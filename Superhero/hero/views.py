@@ -8,7 +8,6 @@ class HeroView(TemplateView):
 
     def get_context_data(self, **kwargs):
         heroes = Superhero.objects.all()
-#        heroes = ['hulk', 'iron_man', 'black_widow']
         return {'heroes': heroes, 'css': '/static/styles.css'}
  
 class AddHeroView(CreateView):
