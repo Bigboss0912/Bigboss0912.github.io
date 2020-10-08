@@ -1,0 +1,8 @@
+
+from hero.views import AboutPage, BasePage, HeroView
+from django.urls import path
+
+urlpatterns = [
+    path('', HeroView.as_view()),
+    path('<str:identity>', HeroView.as_view()),
+]
