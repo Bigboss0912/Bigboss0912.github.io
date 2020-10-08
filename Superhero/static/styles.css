@@ -1,0 +1,89 @@
+body{
+    background-color: dimgrey
+}
+
+#title{
+    color: darkblue;
+    background-color:black;
+    font-style: italic;
+    font-size: 50pt;
+    text-align: center;
+    border-style: double;
+    border-width: thick;
+    border-color: crimson;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1{
+    color: darkblue;
+    background-color:crimson;
+    font-style: italic;
+    border-style: double;
+    border-width: thick;
+    border-color: black;
+    text-align: center;
+    padding: 12px;
+}
+
+h2{
+    color: mediumpurple;
+}
+
+p{
+    color: aliceblue;
+}
+
+a{
+    color: orange;
+    font-size: 120%;
+}
+
+ul{
+    list-style: square;
+    color: dodgerblue;
+}
+
+ol{
+    list-style: square;
+    color: dodgerblue;
+}
+
+table{
+    color: dodgerblue;
+    border: solid white;
+}
+
+nav {
+    margin: 0 px;
+    float: left;
+    background-color: black;
+    box-shadow: 2px 2px 5px gray;
+    text-align: center;
+    position: relative;
+    top: 8px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 10px;
+    margin:  19px;
+    display: inline;
+    background-color: darkblue;
+    color: white;
+    box-shadow: 2px 2px 5px gray;
+}
+
+nav ul li a {
+    display:inline;
+    color: aliceblue;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer{
+    text-align: center;
+}
