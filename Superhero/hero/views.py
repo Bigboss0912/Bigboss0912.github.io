@@ -12,7 +12,7 @@ class HeroView(TemplateView):
         
         return {'hero': hero}
     
-class HeroListView(Listview):
+class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
 
