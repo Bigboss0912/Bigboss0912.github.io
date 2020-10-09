@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.views.generic.edit import CreateView
 from .models import Superhero
 
@@ -15,7 +15,11 @@ class HeroView(TemplateView):
 class HeroListView(Listview):
     template_name = "hero_list.html"
     model = Superhero
- 
+
 class AddHeroView(CreateView):
     template_name = "hero_add.html"
+    model = Superhero
+
+Class HeroDetailView(DetailView):
+    template_name = "hero_detail.html"
     model = Superhero
