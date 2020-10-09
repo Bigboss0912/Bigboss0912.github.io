@@ -11,15 +11,11 @@ class HeroView(TemplateView):
         hero = Superhero.objects.get(pk=1)
         
         return {'hero': hero}
+    
+class HeroListView(Listview):
+    template_name = "hero_list.html"
+    model = Superhero
  
 class AddHeroView(CreateView):
     template_name = "hero_add.html"
     model = Superhero
-    
-
-class BasePage(TemplateView):
-    template_name = "superhero_theme.html"
-    
-    
-class AboutPage(TemplateView):
-    template_name = "about.html"
