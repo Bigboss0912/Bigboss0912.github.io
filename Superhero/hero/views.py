@@ -20,6 +20,6 @@ class AddHeroView(CreateView):
     template_name = "hero_add.html"
     model = Superhero
 
-Class HeroDetailView(DetailView):
+class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero
