@@ -1,5 +1,5 @@
 
-from hero.views import AboutPage, BasePage, HeroView
+from hero.views import HeroView, HeroListView, AddHeroView
 from django.urls import path
 
 urlpatterns = [
