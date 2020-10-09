@@ -4,11 +4,13 @@ from .models import Superhero
 
 
 class HeroView(TemplateView):
-    template_name = "hero.html"
+    template_name = "hero_detail.html"
 
     def get_context_data(self, **kwargs):
-        heroes = Superhero.objects.all()
-        return {'heroes': heroes, 'css': '/static/styles.css'}
+        #heroes = Superhero.objects.all()
+        hero = Superhero.objects.get(pk=1)
+        
+        return {'hero': hero}
  
 class AddHeroView(CreateView):
     template_name = "hero_add.html"
