@@ -1,4 +1,4 @@
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import CreateView, DetailView, ListView,TemplateView
 from django.views.generic.edit import CreateView
 from .models import Superhero
 
@@ -23,3 +23,11 @@ class AddHeroView(CreateView):
 class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero
+    
+from django.views.generic.edit import CreateView
+from .models import Superhero
+
+class HeroEditView(CreateView):
+    template_name = "hero_edit.html"
+    model = Superhero
+    fields = '__all__'
