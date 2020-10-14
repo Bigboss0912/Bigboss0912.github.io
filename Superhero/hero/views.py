@@ -1,5 +1,5 @@
-from django.views.generic import CreateView, DetailView, ListView,TemplateView
-from django.views.generic.edit import CreateView
+from django.urls import reverse_lazy
+from django.views.generic import CreateView, DeleteView, DetailView, ListView,TemplateView
 from .models import Superhero
 
 
@@ -24,10 +24,12 @@ class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
     model = Superhero
     
-from django.views.generic.edit import CreateView
-from .models import Superhero
-
 class HeroEditView(CreateView):
     template_name = "hero_edit.html"
     model = Superhero
     fields = '__all__'
+    
+class HeroDeleteView(DeleteView):
+    template_name = "hero_delete.html"
+    model = Superhero
+    success_url = reverse_lazy('hero_list')
