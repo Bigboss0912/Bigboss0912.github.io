@@ -3,22 +3,19 @@ from django.views.generic import CreateView, DeleteView, DetailView, ListView,Te
 from .models import Superhero
 
 
-class HeroView(TemplateView):
-    template_name = "hero_detail.html"
 
-    def get_context_data(self, **kwargs):
-        #heroes = Superhero.objects.all()
-        hero = Superhero.objects.get(pk=1)
-        
-        return {'hero': hero}
+class HeroView(DetailView):
+    template_name = "hero_detail.html"
+    model = Superhero
     
 class HeroListView(ListView):
     template_name = "hero_list.html"
     model = Superhero
 
-class AddHeroView(CreateView):
+class HeroAddView(CreateView):
     template_name = "hero_add.html"
     model = Superhero
+    fields = '__all__'
 
 class HeroDetailView(DetailView):
     template_name = "hero_detail.html"
