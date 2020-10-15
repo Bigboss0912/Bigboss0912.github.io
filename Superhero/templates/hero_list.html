@@ -1,21 +1,37 @@
 {% extends 'superhero_theme.html' %}
 
 
-{% block content %}
+{% block main %}
 
-    <h1>Heroes Gallery</h1>
+   <main class="bg-dark text-light">
+       <div class="container text-center">
+           
+            <h1>Heroes Gallery</h1>
 
-    {% for hero in heroes %}
+            {% for hero in object_list %}
+                
+                <div class="card m-5">
+                    <div class="card-header">
+                        <h2>Hero - 
+                            <a href="{{ hero.pk }}">Hero: {{ hero.name }}</a>
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{ hero.pk }}/" class="btn btn-primary">Edit {{ hero.name }}</a>
+                        <p>
+                            This page shows my favorite hero.
+                        </p>
+                        <p>
+                            Secret ID: {{ hero.identity }}
+                        </p>
+                        <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+                        <p><i class="fa fa-user fa-6x"></i></p>
+                    </div>
+                </div>   
 
-        <h2>Hero - {{ hero.name }}</h2>
-        <p>
-            This page shows my favorite hero.
-        </p>
-        <p>
-            Secret ID: {{ hero.identity }}
-        </p>
-        <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+            {% endfor %}
+       </div>
+    
+     </main>
 
-    {% endfor %}
-
-{% endblock content %}
+{% endblock main %}
