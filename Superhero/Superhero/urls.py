@@ -16,7 +16,7 @@ urlpatterns = [
 #    path('<str:identity>', HeroView.as_view()),
     path('', HeroListView.as_view(), name='hero_list'),
     path('<int:pk>', HeroDetailView.as_view(), name='hero_detail'),
-    path('add', HeroAddView.as_view(), name='hero_add'),
+    path('<int:pk>',  HeroAddView.as_view(),    name='hero_add'),
     path('<int:pk>/', HeroEditView.as_view(), name='hero_edit'),
     
 ]
