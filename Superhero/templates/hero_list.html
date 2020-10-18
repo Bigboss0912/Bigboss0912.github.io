@@ -3,35 +3,35 @@
 
 {% block main %}
 
-   <main class="bg-secondary text-dark">
-       <div class="container text-center">
-           
-            <h1>Heroes Gallery</h1>
+<main class="bg-secondary text-dark">
+  <div class="container text-center">
 
-            {% for hero in object_list %}
-                
-                <div class="card m-5">
-                    <div class="card-header">
-                        <h2> 
-                            <a href="{{ hero.pk }}" class="text-danger">Hero: {{ hero.name }}</a>
-                        </h2>
-                    </div>
-                    <div class="card-body">
-                        <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
-                        <p>
-                            This page shows my favorite hero.
-                        </p>
-                        <p>
-                            Secret ID: {{ hero.identity }}
-                        </p>
-                        <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
-                        <p><i class="fa fa-user fa-6x"></i></p>
-                    </div>
-                </div>   
+    <h1>Heroes Gallery</h1>
 
-            {% endfor %}
-       </div>
-    
-     </main>
+    {% for hero in object_list %}
+
+    <div class="card m-5">
+      <div class="card-header">
+        <h2>
+          <a href="{{ hero.pk }}" class="text-danger">Hero: {{ hero.name }}</a>
+        </h2>
+      </div>
+      <div class="card-body">
+        <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
+        <p>
+          This page shows my favorite hero.
+        </p>
+        <p>
+          Secret ID: {{ hero.identity }}
+        </p>
+        <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+        <p><i class="fa fa-user fa-6x"></i></p>
+      </div>
+    </div>
+
+    {% endfor %}
+  </div>
+
+</main>
 
 {% endblock main %}

@@ -3,17 +3,17 @@
 
 {% block content %}
 
-    <h1>Heroes Gallery</h1>
-    <h3>This page shows my favorite heroes.</h3>
-    
-    {% for hero in heroes %}
-       
-        <h2>Hero: {{ hero.name }}</h2>       
-        <p>
-            Secret ID: {{ hero.identity }}
-        </p>
-        <img src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
-    
-    {% endfor %}
+<h1>Heroes Gallery</h1>
+<h3>This page shows my favorite heroes.</h3>
+
+{% for hero in heroes %}
+
+<h2>Hero: {{ hero.name }}</h2>
+<p>
+  Secret ID: {{ hero.identity }}
+</p>
+<img src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+
+{% endfor %}
 
 {% endblock content %}
