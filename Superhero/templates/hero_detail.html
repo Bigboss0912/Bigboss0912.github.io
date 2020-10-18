@@ -18,14 +18,22 @@
                 </h2>
             </div>
             <div class="card-body">
-                <a href="{{ hero.pk }}/" class="btn btn-primary">Edit {{ object.name }}</a>
                 <p>
                     This page shows my favorite hero.
                 </p>
                 <p>
                     Secret ID: {{ object.identity }}
                 </p>
+                
+                <pre>IMAGE: {{ object.image }}</pre>
+                
+                {% if missing %}             
+                <p><i class="fa fa-user fa-6x" i/></p>
+                {% endif %}
+                
+                
                 <img width="300" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
+                
             </div>
         </div>
 
