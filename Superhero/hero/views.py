@@ -23,7 +23,7 @@ class HeroListView(ListView):
     
     
 class HeroAddView(CreateView):
-    template_name = "hero_edit.html"
+    template_name = "hero_add.html"
     model = Superhero
     fields = '__all__'
     
