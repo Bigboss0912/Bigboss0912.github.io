@@ -1,0 +1,6 @@
+.panel-default > .panel-heading-custom {
+    background: darkslategrey;
+    background-color: darkslategrey;
+    background-image: none;
+    color: aliceblue;
+}
