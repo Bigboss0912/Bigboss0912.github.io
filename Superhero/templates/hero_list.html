@@ -10,11 +10,24 @@
     <a href="add" class="btn btn-dark">Add Hero</a>
 
     {% for hero in object_list %}
-
-    <div class="card m-5">
+      
+  
+ <div class="panel-group">
+  <div class="panel panel-heading-custom">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" href="#collapse{{ hero.pk }}">Hero: {{ hero.name }}</a>
+      </h4>
+    </div>
+    <div id="collapse{{ hero.pk }}" class="panel-collapse collapse">
+        
+        
+      <div class="panel-body">
+          
+          <div class="card m-5">
       <div class="card-header">
         <h2>
-          <a href="{{ hero.pk }}" class="text-danger">Hero: {{ hero.name }}</a>
+          <a href="{{ hero.pk }}" class="text-danger">{{ hero.name }}</a>
         </h2>
       </div>
       <div class="card-body">
@@ -29,6 +42,13 @@
         <p><i class="fa fa-user fa-6x"></i></p>
       </div>
     </div>
+        
+        </div>
+        
+    </div>
+  </div>
+</div>
+    
 
     {% endfor %}
   </div>
