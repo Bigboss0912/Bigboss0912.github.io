@@ -11,47 +11,46 @@
 
     {% for hero in object_list %}
       
-<div id="accordion">
+    <div id="accordion">
 
-  <div class="card">
-    <div class="card-header">
-      <a class="card-link" data-toggle="collapse" href="#collapse{{ hero.pk }}">
-        {{ hero.name }}
-      </a>
-    </div>
-    <div id="collapse{{ hero.pk }}" class="collapse" data-parent="#accordion">
-      <div class="card-body">
-          
-          
-        <div class="card m-5">
-      <div class="card-header">
-        <h2>
-          <a href="{{ hero.pk }}" class="text-danger">{{ hero.name }}</a>
-        </h2>
-      </div>
-      <div class="card-body">
-        <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
-        <p>
-            This page shows my favorite hero.
-        </p>
-        <p>
-            Name: {{ hero.name }}
-        </p>
-        <p>
-            Secret ID: {{ hero.identity }}
-        </p>
-        <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
-        <p><i class="fa fa-user fa-6x"></i></p>
-      </div>
-    </div>
-          
-          
-      </div>
-    </div>
-  </div>
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapse{{ hero.pk }}">
+            {{ hero.name }}
+          </a>
+        </div>
+        <div id="collapse{{ hero.pk }}" class="collapse" data-parent="#accordion">
+          <div class="card-body">
 
 
-</div> 
+            <div class="card m-5">
+          <div class="card-header">
+            <h2>
+              <a href="{{ hero.pk }}" class="text-danger">{{ hero.name }}</a>
+            </h2>
+          </div>
+          <div class="card-body">
+            <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
+            <p>
+                This page shows my favorite hero.
+            </p>
+            <p>
+                Name: {{ hero.name }}
+            </p>
+            <p>
+                Secret ID: {{ hero.identity }}
+            </p>
+            <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
+            <p><i class="fa fa-user fa-6x"></i></p>
+          </div>
+        </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div> 
       
     {% endfor %}
   </div>
