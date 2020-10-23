@@ -16,7 +16,7 @@
   <div class="card">
     <div class="card-header">
       <a class="card-link" data-toggle="collapse" href="#collapse{{ hero.pk }}">
-        Hero: {{ hero.name }}
+        {{ hero.name }}
       </a>
     </div>
     <div id="collapse{{ hero.pk }}" class="collapse" data-parent="#accordion">
@@ -32,10 +32,13 @@
       <div class="card-body">
         <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
         <p>
-          This page shows my favorite hero.
+            This page shows my favorite hero.
         </p>
         <p>
-          Secret ID: {{ hero.identity }}
+            Name: {{ hero.name }}
+        </p>
+        <p>
+            Secret ID: {{ hero.identity }}
         </p>
         <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
         <p><i class="fa fa-user fa-6x"></i></p>
