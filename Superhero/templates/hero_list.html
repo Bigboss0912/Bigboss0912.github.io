@@ -8,6 +8,7 @@
 
     <h1>Heroes Gallery</h1>
     <a href="add" class="btn btn-dark">Add Hero</a>
+    <p></p>
 
     {% for hero in object_list %}
       
@@ -41,7 +42,9 @@
                 Secret ID: {{ hero.identity }}
             </p>
             <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
-            <p><i class="fa fa-user fa-6x"></i></p>
+            <p>
+                <i class="fa fa-user fa-6x"></i>
+            </p>
           </div>
         </div>
 
