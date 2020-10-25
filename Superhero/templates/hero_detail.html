@@ -3,60 +3,53 @@
 
 {% block main %}
 
-<main class="bg-secondary text-dark">
+<main class="bg-secondary text-light">
+    <div class="container">
 
-  <div class="container">
+        <div class="text-center">
 
-    <div class="text-center">
+            <a href="/" class="btn btn-dark m-3">Hero List</a>
 
-      <a href="/" class="btn btn-dark">Hero List</a>
-      <a href="add" class="btn btn-dark">Add</a>
-      <a href="{{ object.pk }}/" class="btn btn-dark">Edit</a>
+            <div class="card m-3 mb-5">
+                <div class="card-header">
+                    <h2>
+                        <a class="text-danger" href="{{ object.pk }}">{{ object.name }}</a>
+                    </h2>
+                </div>
 
-      <div class="card m-5">
-        <div class="card-header">
-          <h2>
-            <a href="{{ hero.pk }}" class="text-danger">Hero: {{ object.name }}</a>
-          </h2>
+                <div class="card-body text-dark">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <p>
+                                Hero: {{ object.name }}
+                            </p>
+                            <p>
+                                Secret ID: {{ object.identity }}
+                            </p>
+                            <p>
+                                Image: {{ object.image }}
+                            </p>
+                            <p>
+                                <a href="{{ object.pk }}/" class="btn btn-dark">Edit</a>
+                            </p>
+
+                        </div>
+                        
+                        <div class="col-lg-6">
+                            {% if object.image != object.name %}
+                            <p><i class="fa fa-user fa-6x"></i></p>
+                            {% endif %}
+
+                            <img width="300" src="/static/images/{{ object.image }}.jpg" alt="{{ object.identity }}">
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
         </div>
-        <div class="card-body">
-          <p>
-            This page shows my favorite hero.
-          </p>
-          <p>
-            Secret ID: {{ object.identity }}
-          </p>
 
-          <pre>IMAGE: {{ object.image }}</pre>
-
-          {% if missing %}
-          <p><i class="fa fa-user fa-6x" i/></p>
-          {% endif %}
-
-
-          <img width="300" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
-
-        </div>
-      </div>
-
-      <!--
-      <h1 class="text-success">Hero Profile</h1>
-      <h2>Hero - {{ object.name }}</h2>
-      <p>
-      This page shows my favorite hero.
-    </p>
-    <p>
-    Secret ID: {{ object.identity }}
-  </p>
-
-  <img width="300" src="/static/images/{{ object.name }}.jpg" alt="{{ object.identity }}">
--->
-
-</div>
-
-</div>
-
+    </div>
 </main>
-
 
 {% endblock main %}

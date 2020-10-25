@@ -27,24 +27,25 @@
             <div class="card m-5">
           <div class="card-header">
             <h2>
-              <a href="{{ hero.pk }}" class="text-danger">{{ hero.name }}</a>
+              <a href="{{ hero.pk }}" class="text-danger">Details: {{ hero.name }}</a>
             </h2>
           </div>
           <div class="card-body">
             <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
-            <p>
-                This page shows my favorite hero.
-            </p>
+            <p></p>
             <p>
                 Name: {{ hero.name }}
             </p>
             <p>
                 Secret ID: {{ hero.identity }}
             </p>
-            <img width="300" src="/static/images/{{ hero.name }}.jpg" alt="{{ hero.identity }}">
-            <p>
-                <i class="fa fa-user fa-6x"></i>
-            </p>
+              
+              {% if hero.image != hero.name %}
+              <p><i class="fa fa-user fa-6x"></i></p>
+              {% endif %}
+              <img width="300" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
+
+
           </div>
         </div>
 
