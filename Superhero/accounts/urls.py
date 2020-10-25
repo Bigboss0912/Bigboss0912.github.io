@@ -1,7 +1,10 @@
-from django.urls import path
+from django.contrib import admin
+from django.urls import path, include
 
-from .views import RegisterView
+from .views import SignUpView
 
 urlpatterns = [
-    path('register/', RegisterView.as_view(), name='register'),
+    path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
+    path('accounts/signup/', SignUpView.as_view(), name='signup'),
 ]
