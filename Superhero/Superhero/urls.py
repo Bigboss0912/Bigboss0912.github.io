@@ -16,22 +16,12 @@
 #    
 #]
 
-from django.urls import path
+from django.urls import path, include
 
-from .views import (
-    HeroListView,
-    HeroDetailView,
-    HeroCreateView,
-    HeroUpdateView,
-    HeroDeleteView,
-)
 
 urlpatterns = [
     
-    path('post/<int:pk>/delete', HeroDeleteView.as_view(), name='hero_delete'),
-    path('post/add',             HeroCreateView.as_view(), name='hero_add'),
-    path('post/<int:pk>',        HeroDetailView.as_view(), name='hero_detail'),
-    path('post/<int:pk>/',       HeroUpdateView.as_view(), name='hero_edit'),
-    path('',                     HeroListView.as_view(),   name='hero_list'),
+    path('', include('accounts.urls')), 
+    path('', include('hero.urls')),
     
 ]
