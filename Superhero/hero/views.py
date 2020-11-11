@@ -92,3 +92,10 @@ class AccordionView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return dict(accordion=accordion_data())
+    
+    
+class SuperView(TemplateView):
+    template_name = 'super.html'
+    
+    def get_context_data(self, **kwargs):
+        return dict(card=card_data())
