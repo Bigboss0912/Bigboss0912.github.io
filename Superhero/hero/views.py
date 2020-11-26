@@ -99,3 +99,7 @@ class SuperView(TemplateView):
     
     def get_context_data(self, **kwargs):
         return dict(card=card_data())
+    
+    
+class TestView(TemplateView):
+    template_name = 'test_page.html'
