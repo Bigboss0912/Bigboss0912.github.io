@@ -23,6 +23,6 @@ urlpatterns = [
     
     path('', include('accounts.urls')), 
     path('', include('hero.urls')),
-    path('', include('test_page.urls')),
+    path('', include('test_page.html')),
     
 ]
