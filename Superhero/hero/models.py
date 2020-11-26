@@ -5,7 +5,10 @@ from django.urls import reverse
 class Superhero(models.Model):
     name = models.CharField(max_length=20)
     identity = models.CharField(max_length=20)
-    image = models.CharField(max_length=200, null=True)
+    description = models.CharField(max_length=40)
+    strength = models.CharField(max_length=20)
+    weakness = models.CharField(max_length=20)
+    image = models.CharField(max_length=20, null=True)
     
     def __str__(self):
         return self.identity
