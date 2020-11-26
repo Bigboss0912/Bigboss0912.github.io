@@ -6,6 +6,7 @@ from .views import (
     HeroCreateView,
     HeroUpdateView,
     HeroDeleteView,
+    TestView,
 )
 
 urlpatterns = [
@@ -14,6 +15,7 @@ urlpatterns = [
     path('add',             HeroCreateView.as_view(), name='hero_add'),
     path('<int:pk>',        HeroDetailView.as_view(), name='hero_detail'),
     path('<int:pk>/',       HeroUpdateView.as_view(), name='hero_edit'),
-    path('',                     HeroListView.as_view(),   name='hero_list'),
+    path('',                HeroListView.as_view(),   name='hero_list'),
+    path('test',            TestView.as_view(),   name='test_page'),
     
 ]
