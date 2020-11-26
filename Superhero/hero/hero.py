@@ -4,7 +4,7 @@ from os.path import exists
 
 
 def lorem(num_words):
-    text = open('Documents/lorem.txt').read()
+    text = open('static/docs/lorem.txt').read()
     return ' '.join(text.split(' ')[:num_words])
     
 
