@@ -1,0 +1,75 @@
+{% extends 'superhero_theme.html' %}
+
+
+{% block main %}
+
+<main class="bg-secondary text-dark">
+    
+    
+    <div class="container text-center">
+
+    <h1>Heroes Gallery</h1>
+    <a href="add" class="btn btn-dark">Add Hero</a>
+    <p></p>
+
+    {% for hero in object_list %}
+      
+    <div id="accordion">
+
+      <div class="card">
+        <div class="card-header">
+          <a class="card-link" data-toggle="collapse" href="#collapse{{ hero.pk }}">
+            {{ hero.name }}
+          </a>
+        </div>
+        <div id="collapse{{ hero.pk }}" class="collapse" data-parent="#accordion">
+          <div class="card-body">
+
+
+            <div class="card m-5">
+          <div class="card-header">
+            <h2>
+              <a href="{{ hero.pk }}" class="text-danger">Details: {{ hero.name }}</a>
+            </h2>
+          </div>
+          <div class="card-body">
+            <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
+            <p></p>
+            <p>
+                Name: {{ hero.name }}
+            </p>
+            <p>
+                Secret ID: {{ hero.identity }}
+            </p>
+              <p>
+                Description: {{ hero.description }}
+            </p>
+            <p>
+                Strength: {{ hero.strength }}
+            </p>
+              <p>
+                Weakness: {{ hero.weakness }}
+            </p>
+              
+              {% if hero.image != hero.name %}
+              <p><i class="fa fa-user fa-6x"></i></p>
+              {% endif %}
+              <img width="300" src="/static/images/{{ hero.image }}.jpg" alt="{{ hero.identity }}">
+
+
+          </div>
+        </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div> 
+      
+    {% endfor %}
+  </div>
+
+</main>
+
+{% endblock main %}

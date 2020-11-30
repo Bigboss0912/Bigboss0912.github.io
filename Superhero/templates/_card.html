@@ -1,0 +1,20 @@
+{% extends 'test_page.html' %}
+
+{% block main %}
+
+    <h2> Card Layout View</h2>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header bg-primary text-light">
+                <h2>{{ card.title}}</h2>
+            </div>
+            <div class="card-body">
+                <p>{{ card.body }}</p>
+            </div>
+        </div>
+
+    </div>
+
+{% endblock main %}
