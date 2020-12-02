@@ -9,8 +9,7 @@
     <div class="container text-center">
 
     <h1>Heroes Gallery</h1>
-    <a href="add" class="btn btn-dark">Add Hero</a>
-    <a href="<int:pk>/delete" class="btn btn-dark">Remove Hero</a>
+    <a href="add" class="btn btn-dark">Add Hero</a>   
     <p></p>
 
     {% for hero in object_list %}
@@ -35,6 +34,7 @@
           </div>
           <div class="card-body">
             <a href="{{ hero.pk }}/" class="btn btn-dark">Edit {{ hero.name }}</a>
+            <a href="{{ hero.pk }}/delete" class="btn btn-dark">Remove {{ hero.name }}</a>
             <p></p>
             <p>
                 Name: {{ hero.name }}
