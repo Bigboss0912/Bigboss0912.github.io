@@ -71,8 +71,8 @@ class TableView(TemplateView):
     template_name = 'table.html'
     
     def get_context_data(self, **kwargs):
-        return dict(title='Lessons Schedule', 
-                    table=table_data('Documents/lessons.csv'))
+        return dict(title='', 
+                    table=table_data('static/docs/.csv'))
     
     
 class TabsView(TemplateView):
