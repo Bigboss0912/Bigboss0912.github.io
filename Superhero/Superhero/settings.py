@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'hero',
     'accounts',
     'crispy_forms',
+    'posts',
 ]
 
 MIDDLEWARE = [
