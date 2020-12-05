@@ -3,8 +3,7 @@ from django.views.generic import ListView, DetailView, TemplateView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView 
 from django.urls import reverse_lazy
 
-from .models import Superhero
-
+from .models import Post
 
 class NewsView(TemplateView):
     model = Post
