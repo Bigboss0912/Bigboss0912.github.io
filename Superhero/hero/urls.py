@@ -7,6 +7,7 @@ from .views import (
     HeroUpdateView,
     HeroDeleteView,
     TestView,
+    HomeView,
 )
 
 urlpatterns = [
@@ -17,5 +18,6 @@ urlpatterns = [
     path('<int:pk>/',       HeroUpdateView.as_view(), name='hero_edit'),
     path('',                HeroListView.as_view(),   name='hero_list'),
     path('test',            TestView.as_view(),   name='test_page'),
+    path('home',            HomeView.as_view(),   name='home_page'),
     
 ]
