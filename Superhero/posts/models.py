@@ -3,7 +3,7 @@ from django.urls import reverse
 
 
 class Superhero(models.Model):
-    Author = models.ForeignKey()
+    Author = models.ForeignKey(User)
     Date = models.DateField()
     Title = models.CharField(max_length=200)
     Text = models.TextField()
