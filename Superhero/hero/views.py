@@ -103,3 +103,7 @@ class SuperView(TemplateView):
     
 class TestView(TemplateView):
     template_name = 'test_page.html'
+    
+    
+class HomeView(TemplateView):
+    template_name = 'home.html'
